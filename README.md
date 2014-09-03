@@ -62,7 +62,9 @@ slow_server:
 
 The key can then be specified in `ENV['REMOTE_ENV']` thusly:
 
-    RAILS_ENV=production REMOTE_ENV=fast_server bundle exec rake jobs:remote_workoff
+```bash
+RAILS_ENV=production REMOTE_ENV=fast_server bundle exec rake jobs:remote_workoff
+```
 
 If `ENV['REMOTE_ENV']` is not set, `delayed_job-ssh_remote_worker` will default to `Rails.env`.
 
