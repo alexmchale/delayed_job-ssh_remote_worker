@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["alex@anticlever.com"]
   spec.summary       = %q{Run DelayedJob queues over SSH in a remote database}
   spec.description   = %q{Provides a few rake tasks to run DelayedJob jobs on a remote server over SSH}
-  spec.homepage      = ""
+  spec.homepage      = "http://github.com/alexmchale/delayed_job-ssh_remote_worker"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
@@ -20,10 +20,10 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "delayed_job_active_record"
-  spec.add_dependency "net-ssh-gateway"
+  spec.add_runtime_dependency "delayed_job_active_record", ">= 3.0.0", "< 4.2.0"
+  spec.add_runtime_dependency "net-ssh-gateway", "~> 1.2"
 
   spec.add_development_dependency "bundler", "~> 1.6"
-  spec.add_development_dependency "rake"
+  spec.add_development_dependency "rake", "~> 10.3"
 
 end
