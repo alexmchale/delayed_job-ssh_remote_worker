@@ -20,6 +20,8 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
+  spec.required_ruby_version = ">= 1.9.3"
+
   spec.add_runtime_dependency "delayed_job_active_record", ">= 3.0.0", "< 4.2.0"
   spec.add_runtime_dependency "net-ssh-gateway", "~> 1.2"
 
