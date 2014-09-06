@@ -19,6 +19,23 @@ Or install it yourself as:
 
 ## Usage
 
+This gem provides two Rake tasks - `jobs:remote_work` and `jobs:remote_workoff`.
+
+### Run all jobs continuously
+
+    rake jobs:remote_work
+
+This rake task will run an infinite loop, polling the remote server for new
+delayed jobs to run.
+
+### Run jobs that are currently in the queue
+
+    rake jobs:remote_workoff
+
+This rake task runs the jobs that are currently in the queue, then exits.
+
+## Configuration
+
 Require the gem and either create a `config/remote_database.yml` file that
 contains a record such as below:
 
